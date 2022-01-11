@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    font-family: 'Playfair Display', serif;
+}
+
+.landing{
+    min-height: 100vh;
+
+    /*
+    background: url("");
+    baclground-size: cover;
+    */
+
+    padding: 0rem 5rem;
+}
+
+nav{
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-links a{
+    padding-left: 3rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0.5;
+    color: black;
+}
+
+.nav-links a:hover{
+    text-decoration: none;
+    opacity: 1;
+} 
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color:rgb(14, 15, 15); 
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+#logo{
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+#logo a{
+    color: black;
+    text-decoration: none;
+}
+
+.big-text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.intro-para{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.intro{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    background: rgb(97, 105, 109);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.intro-text{
+    color: rgb(233, 233, 233);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.hide{
+    background: black;
+    overflow: hidden;
+}
+
+.hide span{
+    transform: translateY(100%);
+    display: inline-block;
+} 
+
+@media screen and  (max-width:768px){ 
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 1rem;
+        height: 92vh;
+        top:10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links a{
+        padding-top: 3rem;
+    }
+
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+ 

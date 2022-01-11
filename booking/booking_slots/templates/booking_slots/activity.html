@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/activity.css' %}">
+
+    <script>
+        var URL = "{% url 'available-slots' %}";
+    </script>
+
+    <title>Slots</title>
+</head>
+<body>
+
+    <h1>Box Cricket</h1>
+    <p>
+        We all enjoy and love a good game of cricket. 
+        But, it's very hard to orchestrate a full-fledged cricket match involving 22 players (11 in each team), 
+        a well-maintained pitch, a big playground or arena, and a heavy bunch of safety gear. 
+        All of this is not easily acquired. That's why, we provide Box Cricket! Box Cricket is an exciting spin 
+        to your traditional cricket game. Introducing a paradigm shift to conventional cricket, this concept 
+        approaches the game from an entirely different direction, which further persuades our players to 
+        put their most intense efforts forward. It shares all the basic rules and regulations of cricket, 
+        but the matches are shorter, more fast-paced, and enhanced for higher engagement and excitement. 
+        How is it played? Box cricket is played within an enclosed area over a turf pitch. Each match 
+        involves 2 teams consisting of 4-7 players each. Our All-Weather Pitches combined with Flood Lights 
+        comprise of the ideal set up for late night games, as well. Play with Fuzolo Open to individuals 
+        or small groups, our field can be booked for a minimum duration of 1 hour to as long as you wish. 
+        During your time, you can play casually with your friends or use the pitches to get extra training 
+        ahead of your next match. We can't wait to see you on the ground! And we hope you are just as excited. 
+        To start playing, just click here!
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <div>
+        <div>
+            <ul>
+                <li>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <select id = 'slot_len' onchange="loadFrame('starterVID')">
+                            <option>Choose Duration</option>
+                            <option value="30">30 mins</option>
+                            <option value="1">1 hour</option>
+                            <option value="2">2 hours</option>
+                            <option value="3">3 hours</option>
+                            <option value="4">4 hours</option>
+                        </select>
+                    </form>
+
+                    <div>
+                        <iframe class = "slots_iframe" name = "starterVID" id = "starterVID" src="{% url 'available-slots' %}"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{% static 'js/activity.js' %}"></script>
+</body>
+</html>
