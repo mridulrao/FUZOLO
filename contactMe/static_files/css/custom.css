@@ -1,0 +1,11 @@
+#bootstrap-overide{
+    margin-top: 200px;
+}
+
+body{
+    background-color: #1F2833;
+}
+
+#text_color{
+    color: #66FCF1;
+}
