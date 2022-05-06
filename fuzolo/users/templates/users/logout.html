@@ -1,0 +1,24 @@
+{% extends "fuzolo/base_new.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout|FUZOLO</title>
+</head>
+<body>
+    <h2>You have been logged out</h2>
+    <div>
+        <a href="{% url 'login' %}">Login Again</a>
+    </div>
+</body>
+</html>
+
+
+{% endblock content %}

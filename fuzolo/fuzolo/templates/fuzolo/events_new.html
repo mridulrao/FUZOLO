@@ -1,0 +1,54 @@
+{% extends "fuzolo/base_new.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events|FUZOLO</title>
+</head>
+<body>
+
+    <div class="bookevent-heading">
+    <h1>Book Events</h1>
+    </div>
+
+    <div class="book-events-cards">
+    
+        {% for event in events.sports %}
+                <div class="a-box">
+                    <div class="img-container">
+                        <div class="img-inner">
+                            <div class="inner-skew">
+                                <img src="{{ event.img.url }}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-container">
+                        <h3>{{ event.name }}</h3>
+
+                        <a href="{% url 'product_details' event.name %}">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Learn More</button>
+                        </a>
+
+                    </div>
+                </div>
+
+        {% endfor %}
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+</body>
+</html>
+
+{% endblock content %}
+
+
+
+   
