@@ -22,7 +22,7 @@
 
     <div class="navbar"> 
         <div class="logo">
-         <a href="index.html">   <img src="{% static 'images/logo.png' %}" alt="logo"></a>
+         <a href="{% url 'index-page' %}">   <img src="{% static 'images/logo.png' %}" alt="logo"></a>
        <!-- <h1>Logo</h1> -->
         </div>
         <div class="menu-btn" id="menu-btn-id">
@@ -507,6 +507,15 @@
     <div class="footer-section">
         <p>© 2022 FUZOLO Pvt Ltd</p>
     </div>
+
+    <script>
+        const hamburger=document.getElementById('menu-btn-id');
+        const navwrap=document.getElementById('nav-links-id');
+        hamburger.addEventListener('click',()=>{
+        console.log("hello");
+        navwrap.classList.toggle('show');
+        });
+    </script>
   
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
