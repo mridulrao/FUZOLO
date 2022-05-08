@@ -667,7 +667,7 @@ body {
   font-size: 16px;
   margin: 0;
 }
-.slick-track > div:nth-child(even) {
+.team-and-active-cards  .slick-track > div:nth-child(even) {
   background-color: #1e1b1b;
   color: #fff;
 }
@@ -1382,7 +1382,7 @@ body {
     .alternate-text{max-width:500px;text-align: center;}
     .alternate-text p{font-size:20px}
     .alternate-section>div:nth-child(even){flex-direction: row-reverse;}
-    .detail-section{border-radius: 20px;width: 80%;margin: 0 auto;background-color: #fbfbfb;padding-top: 50px;padding-bottom: 60px;margin-top: 100px;margin-bottom: 80px;}
+    .detail-section{border-radius: 20px;width: 80%;margin: 0 auto;background-color: #fbfbfb;padding-top: 50px;padding-bottom: 60px;text-align: center;margin-top: 100px;margin-bottom: 80px;}
     .detail-section h1{font-weight: 500;margin-bottom: 25px;font-size: 42px;}
     .detail-section p{padding: 0 10%;font-size: 22px;opacity: 0.7;}
     .event-open-page{margin-bottom: 80px;}
@@ -1534,11 +1534,10 @@ body {
     }
     .about-us-first{display: flex;justify-content: space-between;justify-content: space-around;align-items: center;width: 90%;margin: 0 auto;}
     .about-us-text p{width: 600px;
-      color: rgba(0, 0, 0, 0.9);
+      color: rgba(0,0,0,.9);
       font-size: 20px;
       font-weight: 400;
       line-height: 27px;
-      text-align: left;
     }
     .choose-section h1{font-size: 26px;
       font-weight: 400;color: rgba(0,0,0,.9);
@@ -1551,7 +1550,7 @@ body {
       line-height: 67px;}
       .choose-slot-page >h1{font-size: 54px;text-align: center;margin-top: 30px;margin-bottom: 40px;}
     /* .about-us-img{width: 40%;} */
-    .about-us-img img{width: 44vw;position: relative;top: -90px;z-index: -1; padding-top: 50px;}
+    .about-us-img img{width: 44vw;position: relative;top: -90px;z-index: -1;}
     .about-us-second{flex-direction: row-reverse;}
     .our-services-about {text-align: center;margin-top: 50px;}
     .our-services-about img{width: 70vw;margin-top: 100px;margin-bottom: 100px;}
@@ -1565,16 +1564,17 @@ body {
     @media (max-width:1200px) {
       .about-us-text h1, .our-services-about h1, .choose-slot-page >h1{font-size:34px;font-weight:500;margin-bottom: 5px;}
       .our-services-about{margin-top: 10px;}
-      .alternate-img img{width: 50vw;height: 200px;object-fit: cover;margin-bottom: 15px;}
+      /* .alternate-img img{width: 50vw;height: 200px;object-fit: cover;margin-bottom: 15px;} */
+      .alternate-img img{height: 230px;object-fit: cover;}
       .alternate-text p{padding: 0 5%;opacity: 0.8;}
       .detail-section{width: 90%;}
       .detail-section p{font-size:20px;padding: 0 5%;}
       .detail-section h1{font-size: 36px;}
       .about-us-section{padding-top: 0;}
       .header-img img{width: 80vw;height: 340px;}
-      .alternate-section>div{flex-direction: column;}
-      .alternate-section>div:nth-child(even){flex-direction: column;}
-      .alternate-text{max-width: unset;}
+      /* .alternate-section>div{flex-direction: column;}
+      .alternate-section>div:nth-child(even){flex-direction: column;} */
+      /* .alternate-text{max-width: unset;} */
       .about-us-first{flex-direction: column;}
       .about-us-text p{width: unset;font-size: 18px;padding: 0 2%;}
     }
@@ -1584,10 +1584,26 @@ body {
       .second-section-img1{margin-bottom: 20px;}
     }
     @media (max-width:600px) {
+       .alternate-img img{width: 50vw;height: 200px;object-fit: cover;margin-bottom: 15px;}
+
+      .alternate-section>div{flex-direction: column;}
+      .alternate-section>div:nth-child(even){flex-direction: column;}
+      .alternate-text{max-width: unset;}
       .second-section-img1 img{width: 52px;height: 52px;}  
     }
-    .testimonials-cards .slick-track {background-color: #1e1b1b;}
+    /* .testimonials-cards .slick-track {background-color: #1e1b1b;} */
 
  .slick-next,.slick-prev{font-size: 30px;width: 40px;height: 40px;border-radius: 50%;border: none;cursor: pointer;border: 1px solid rgba(0,0,0,0.2)}
  .slick-prev{position: absolute;left: 15px;top: 40%;}
  .slick-next{position: absolute;right: 15px;top: 40%;}
+ .team-card-circle img{width: 120px;height:120px; text-align: center;border-radius: 50%;object-fit: cover;}
+ /* .team-card-circle{object-fit: cover;} */
+ .slick-slide img{display:unset !important;} 
+ .team-card1{padding-top: 35px;}
+ .team-card-circle{margin-bottom: 20px;}
+ .testimonial-card1 {background-color: #1e1b1b;}
+ .testimonial-img img {
+  /* transition: all 0.9s ease-in-out; */
+  height: 432px;
+  object-fit: cover;
+}

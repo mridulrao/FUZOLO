@@ -24,6 +24,7 @@
             <form name="myform" method="POST">
               {% csrf_token %}
               <input type="email" name="email" placeholder="Email" required/>
+              <input type="text" name = "phone_number"  placeholder="Phone Number" required/>
               <textarea
               name="message"
               id=""

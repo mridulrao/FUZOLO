@@ -16,10 +16,11 @@ def contact(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         message = request.POST.get('message')
+        phone_number = request.POST.get('phone_number')
         mail_list = []
         mail_list.append('clubfuzolo@gmail.com')
         title = 'Someone tried to contact you through website'
-        send_mail(title, str(message) + "\nEmail - " + str(email) , '', mail_list)
+        send_mail(title, str(message) + "\nEmail - " + str(email) + "\nPhone Number - " + str(phone_number), '', mail_list)
         return redirect('message-sent')
 
     return render(request, 'fuzolo/contact.html')
