@@ -39,7 +39,7 @@ body {
   background: #2c3e50; /* darckblue */
 }
 .myslide {
-  min-height: 100vhpx;
+  min-height: 100vh;
   display: none;
   overflow: hidden;
 }
@@ -1169,7 +1169,7 @@ body {
   }
   .our-pillar-card1 svg{width: 70px;fill: #fff; height: 70px;margin-bottom: 25px;}
   .our-pillar-card1 h1{
-    font-size: 18px;
+    font-size: 18px;text-align: center;
   }
   .our-pillars{font-family: Montserrat;}
   .our-pillar-card1{
@@ -1550,7 +1550,7 @@ body {
       line-height: 67px;}
       .choose-slot-page >h1{font-size: 54px;text-align: center;margin-top: 30px;margin-bottom: 40px;}
     /* .about-us-img{width: 40%;} */
-    .about-us-img img{width: 44vw;position: relative;top: -90px;z-index: -1;}
+    .about-us-img img{width: 44vw;position: relative;z-index: -1;}
     .about-us-second{flex-direction: row-reverse;}
     .our-services-about {text-align: center;margin-top: 50px;}
     .our-services-about img{width: 70vw;margin-top: 100px;margin-bottom: 100px;}
@@ -1579,6 +1579,7 @@ body {
       .about-us-text p{width: unset;font-size: 18px;padding: 0 2%;}
     }
     @media (max-width:1000px) {
+      .about-us-img img{width: 55vw;}
       .second-section-img1 img{width: 82px;height: 82px;}
       .second-section-img1{width: 26%;}
       .second-section-img1{margin-bottom: 20px;}
