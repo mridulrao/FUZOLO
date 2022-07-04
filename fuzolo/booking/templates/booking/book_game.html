@@ -1,0 +1,40 @@
+{% extends "fuzolo/base_new.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/slots_iframe.css' %}">
+    <title>Book Slots|FUZOLO</title>
+</head>
+<body>
+    <div class="choose-slot-page">
+        <h1>Choose Your slot</h1>
+        <div class="choose-section">
+            <div class="choose-first-section">
+                <h1>Book your-slot</h1>
+                Date: <input type="date" id="my_date_picker" value = 'Select Date' onchange="SetDate()">
+
+                <form action="" method="POST">
+                    <a href="#">  
+                        <!-- <input type="submit" onclick = "GetDate(); ReloadSlots();"/>  -->
+                        <input id="date_submit" type="submit" onclick = "ReloadSlots();" class="f" name="date" value = "Submit" disabled>
+                    </a>
+                </form>
+
+                <iframe class = "slots_iframe" id = 'slots_frame' src="{% url 'booking-slots' %}"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/slots.js' %}"></script>
+    
+</body>
+</html>
+
+{% endblock content %}

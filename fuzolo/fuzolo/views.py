@@ -5,7 +5,6 @@ from django.core.mail import send_mail
 from booking import models
 from django.views.generic import ListView
 
-from booking.views import booking_details
 from users import models as user_model
 
 
@@ -41,9 +40,9 @@ def profile(request):
     return render(request, 'fuzolo/profile.html', {'user': logged_user})
 
 def events(request):
-    booking_details.date = ''
     sports = models.Events.objects.all()
     dict1 = {
         'sports' : sports
     }
     return render(request, 'fuzolo/events_new.html', {'events' : dict1})
+

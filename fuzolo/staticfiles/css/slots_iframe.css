@@ -1,0 +1,12 @@
+.slots_iframe{
+    height: 500px;
+    width: 800px;
+}
+
+.slots_iframe_hidden{
+    width: 0; 
+    height: 0; 
+    border: 0; 
+    border: none; 
+    position: absolute;
+}

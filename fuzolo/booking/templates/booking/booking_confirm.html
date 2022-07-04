@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Booking Confirm Page</h1>
+    <br>
+    <h1>USER ID : </h1> {{ user }}
+    <br>
+
+    <h1>PRODUCT : </h1> {{ game }}
+    <br>
+
+    <h1>Start Time</h1>
+    {% for i in Start_Time %}
+         {{ i }} -
+    {% endfor %}
+
+    <h1>End Time</h1>
+    {% for i in End_Time %}
+         {{ i }} -
+    {% endfor %}
+
+
+
+    <h1>POINTS : </h1>{{ Points }}
+    
+</body>
+</html>

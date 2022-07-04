@@ -1,0 +1,64 @@
+{% extends "fuzolo/base_new.html" %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>{{ product.name }}|FUZOLO</title>
+</head>
+
+
+<body>
+    <div class="slot-page">
+        <div class="header-img">
+            <img src="{{product.img.url}}" alt="">
+            <h1>{{product.name}}</h1>
+        </div>
+        <div class="alternate-section">
+            <div class="alternate-card1">
+                <div class="alternate-img">
+
+                    <img src="{{product.img1.url}}" alt="">
+                </div>
+                <div class="alternate-text">
+                    <p>{{product.txt1 }}</p>
+                </div>
+            </div>
+            <div class="alternate-card1">
+                <div class="alternate-img">
+
+                    <img src="{{product.img3.url}}" alt="">
+                </div>
+                <div class="alternate-text">
+                    <p>{{ product.txt2 }}</p>
+                </div>
+            </div>
+            <div class="alternate-card1">
+                <div class="alternate-img">
+
+                    <img src="{{product.img2.url}}" alt="">
+                </div>
+                <div class="alternate-text">
+                    <p>{{ product.txt3 }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="detail-section">
+            <h1>More in detail</h1>
+            <p>{{ product.extra_description }}</p>
+        </div>
+    </div>
+    <div class="event-open-page">
+
+        <h1>Choose Your Slots</h1>
+        <div class="submit-btn">
+
+         <input type="button" id="my_date_picker" value = 'Check Available Slots'>
+
+    </div>
+</body>
+</html>
+
+{% endblock content %}

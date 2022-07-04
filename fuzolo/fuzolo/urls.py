@@ -38,9 +38,10 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name = 'users/login.html'), name = 'login'),
     path('logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name = 'logout'),
     path('events/', events, name = 'events-page'),
-    path('<product_name>/', booking_views.product_details, name = 'product_details'),
     path('select_date/', booking_views.select_date, name = 'select-date'),
     path('sport/', booking_views.sport, name = 'sport-view'),
     path('booking_slots/', booking_views.booking_slots, name = 'booking-slots'),
     path('booking_confirm/', booking_views.booking_confirm, name = 'booking-confirm'),
+    path('book_game/', booking_views.book_game, name = 'book-game'),
+    path('<product_name>/', booking_views.product_details, name = 'product_details'),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
